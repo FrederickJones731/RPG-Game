@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".prep.warRoom">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/yamoos"
+        android:alpha="0.8"
+        android:elevation="-3dp"/>
+    <TextView
+        android:id="@+id/title"
+        style="@style/Title"
+        android:layout_width="340dp"
+        android:layout_height="0sp"
+
+        android:layout_marginTop="5dp"
+        android:background="@drawable/redrivium"
+        android:text="Campaign Mode - Gauntlet 17"
+        android:textColor="#173A6C"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        app:flow_horizontalBias="0.1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/player_char_count_tv"
+        style="@style/alt_text_header2"
+        android:layout_width="200sp"
+        android:layout_height="0sp"
+        android:layout_marginTop="25sp"
+
+        android:text="Player Char Count:"
+        app:layout_constraintHorizontal_weight="1.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/player_num_tv"
+        style="@style/alt_text_header2"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+
+        android:gravity="center"
+        android:text="3"
+        app:layout_constraintHorizontal_weight="1.5"
+        app:layout_constraintStart_toEndOf="@id/player_char_count_tv"
+        app:layout_constraintTop_toTopOf="@id/player_char_count_tv" />
+
+    <LinearLayout
+        android:id="@+id/player_seekbar_ll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@id/halfsies"
+
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/player_char_count_tv">
+        <!--    player number tv-->
+        <TextView
+            style="@style/alt_text_bold"
+            android:layout_width="40dp"
+
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="-"
+
+
+            app:layout_constraintBottom_toTopOf="@id/seekbar_player"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <SeekBar
+            android:id="@+id/seekbar_player"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+
+            android:max="299"
+            android:progress="299"
+            android:progressDrawable="@drawable/hpbar"
+            android:thumb="@drawable/enthusiasm" />
+
+        <TextView
+            style="@style/alt_text"
+            android:layout_width="40dp"
+
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="+"
+
+
+            app:layout_constraintBottom_toTopOf="@id/seekbar_player"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </LinearLayout>
+
+<!--    &lt;!&ndash; char selection linear layout 1&ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/ll_char_selection_1"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginHorizontal="10sp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:layout_marginBottom="5dp"-->
+<!--        android:gravity="center"-->
+
+<!--        app:layout_constraintBottom_toTopOf="@id/ll_char_selection_2"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/halfsies"-->
+<!--        app:layout_constraintHorizontal_weight="6"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/player_seekbar_ll">-->
+
+<!--        &lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--        &lt;!&ndash;            style="@style/alt_text_bold"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_width="0dp"&ndash;&gt;-->
+
+<!--        &lt;!&ndash;            android:layout_height="50dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_weight="2"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:gravity="center"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:text="*" />&ndash;&gt;-->
+
+
+<!--        <androidx.appcompat.widget.SwitchCompat-->
+<!--            android:id="@+id/switch_p1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="2"-->
+<!--            android:checked="true"-->
+<!--            android:gravity="center"-->
+<!--            android:paddingEnd="15dp"-->
+<!--            android:textOff="@string/row_the_second"-->
+<!--            android:textOn="@string/row_the_first" />-->
+
+<!--        <Spinner-->
+<!--            android:id="@+id/spinner_1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_weight="5"-->
+
+<!--            android:background="#99807F7F"-->
+<!--            android:contentDescription="@string/hide_bottom_view_on_scroll_behavior" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/move_selector1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginEnd="5dp"-->
+<!--            android:layout_weight="4"-->
+<!--            android:alpha="0.95"-->
+<!--            android:background="@drawable/woodpecker"-->
+
+<!--            android:fontFamily="sans-serif-black"-->
+<!--            android:text="@string/char_moves"-->
+<!--            android:textColor="#DD000913"-->
+<!--            android:textSize="14sp"-->
+<!--            android:foreground="?android:attr/selectableItemBackground"-->
+<!--            android:theme="@android:style/ThemeOverlay.Material.Dark" />-->
+
+<!--    </LinearLayout>-->
+
+<!--    &lt;!&ndash; char selection linear layout 2&ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/ll_char_selection_2"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0sp"-->
+<!--        android:layout_marginVertical="5dp"-->
+<!--        android:layout_marginStart="10sp"-->
+<!--        android:layout_marginEnd="10sp"-->
+<!--        android:gravity="center"-->
+
+<!--        app:layout_constraintBottom_toTopOf="@id/ll_char_selection_3"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/halfsies"-->
+<!--        app:layout_constraintHorizontal_weight="6"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/ll_char_selection_1">-->
+
+<!--        &lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--        &lt;!&ndash;            style="@style/alt_text_bold"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_width="0dp"&ndash;&gt;-->
+
+<!--        &lt;!&ndash;            android:layout_height="50dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_weight="2"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:gravity="center"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:text="*" />&ndash;&gt;-->
+
+<!--        <androidx.appcompat.widget.SwitchCompat-->
+<!--            android:id="@+id/switch_p2"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="2"-->
+<!--            android:checked="true"-->
+<!--            android:gravity="center"-->
+<!--            android:paddingEnd="15dp"-->
+<!--            android:textOff="@string/row_the_second"-->
+<!--            android:textOn="@string/row_the_first" />-->
+
+<!--        <Spinner-->
+<!--            android:id="@+id/spinner_2"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_weight="5"-->
+
+
+<!--            android:background="#99807F7F"-->
+<!--            android:contentDescription="@string/hide_bottom_view_on_scroll_behavior" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/move_selector2"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginEnd="5dp"-->
+<!--            android:layout_weight="4"-->
+<!--            android:alpha="0.95"-->
+<!--            android:background="@drawable/woodpecker"-->
+
+<!--            android:fontFamily="sans-serif-black"-->
+<!--            android:foreground="?android:attr/selectableItemBackground"-->
+<!--            android:text="@string/char_moves"-->
+<!--            android:textColor="#DD000913"-->
+<!--            android:textSize="14sp"-->
+<!--            android:theme="@android:style/ThemeOverlay.Material.Dark" />-->
+
+<!--        &lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--        &lt;!&ndash;            style="@style/alt_text"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_width="0dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_height="50dp"&ndash;&gt;-->
+
+<!--        &lt;!&ndash;            android:layout_weight="2"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:gravity="right|center"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:text="@string/Lv" />&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        <EditText&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:id="@+id/edit_text_2"&ndash;&gt;-->
+<!--        &lt;!&ndash;            style="@style/alt_text_small"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_width="0dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_height="55dp"&ndash;&gt;-->
+
+
+<!--        &lt;!&ndash;            android:layout_weight="3.5"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:autofillHints=""&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:gravity="center"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:hint="1 - 50"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:inputType="number" />&ndash;&gt;-->
+<!--    </LinearLayout>-->
+
+<!--    &lt;!&ndash; char selection linear layout 3&ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/ll_char_selection_3"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0sp"-->
+<!--        android:layout_marginVertical="5dp"-->
+<!--        android:layout_marginStart="10sp"-->
+<!--        android:layout_marginEnd="10sp"-->
+<!--        android:gravity="center"-->
+
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/halfsies"-->
+<!--        app:layout_constraintHorizontal_weight="6"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/ll_char_selection_2">-->
+
+<!--        &lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--        &lt;!&ndash;            style="@style/alt_text_bold"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_width="0dp"&ndash;&gt;-->
+
+<!--        &lt;!&ndash;            android:layout_height="50dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_weight="2"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:gravity="center"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:text="*" />&ndash;&gt;-->
+
+<!--        <androidx.appcompat.widget.SwitchCompat-->
+<!--            android:id="@+id/switch_p3"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="2"-->
+<!--            android:checked="true"-->
+<!--            android:gravity="center"-->
+<!--            android:paddingEnd="15dp"-->
+<!--            android:textOff="@string/row_the_second"-->
+<!--            android:textOn="@string/row_the_first" />-->
+
+<!--        <Spinner-->
+<!--            android:id="@+id/spinner_3"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_weight="5"-->
+
+<!--            android:background="#99807F7F"-->
+<!--            android:contentDescription="@string/hide_bottom_view_on_scroll_behavior" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/move_selector3"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginEnd="5dp"-->
+<!--            android:layout_weight="4"-->
+<!--            android:alpha="0.95"-->
+<!--            android:background="@drawable/woodpecker"-->
+
+<!--            android:fontFamily="sans-serif-black"-->
+<!--            android:foreground="?android:attr/selectableItemBackground"-->
+<!--            android:text="@string/char_moves"-->
+<!--            android:textColor="#DD000913"-->
+<!--            android:textSize="14sp"-->
+<!--            android:theme="@android:style/ThemeOverlay.Material.Dark" />-->
+<!--        &lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--        &lt;!&ndash;            style="@style/alt_text"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_width="0dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_height="50dp"&ndash;&gt;-->
+
+<!--        &lt;!&ndash;            android:layout_weight="2"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:gravity="right|center"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:text="@string/Lv" />&ndash;&gt;-->
+<!--        &lt;!&ndash;&ndash;&gt;-->
+<!--        &lt;!&ndash;        <EditText&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:id="@+id/edit_text_3"&ndash;&gt;-->
+<!--        &lt;!&ndash;            style="@style/alt_text_small"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_width="0dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_height="55dp"&ndash;&gt;-->
+
+
+<!--        &lt;!&ndash;            android:layout_weight="3.5"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:autofillHints=""&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:gravity="center"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:hint="1 - 50"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:inputType="number"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:contentDescription="@string/hide_bottom_view_on_scroll_behavior"/>&ndash;&gt;-->
+<!--    </LinearLayout>-->
+
+    <ScrollView
+        android:id="@+id/char_selector_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintTop_toBottomOf="@id/player_seekbar_ll"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/halfsies"
+
+        android:layout_weight="9">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!-- char selection linear layout 1-->
+            <LinearLayout
+                android:id="@+id/ll_char_selection_1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="10sp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="3"
+                android:gravity="center">
+
+                <!--        <TextView-->
+                <!--            style="@style/alt_text_bold"-->
+                <!--            android:layout_width="0dp"-->
+
+                <!--            android:layout_height="50dp"-->
+                <!--            android:layout_weight="2"-->
+                <!--            android:gravity="center"-->
+                <!--            android:text="*" />-->
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_p1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:paddingEnd="15dp"
+                    android:textOff="@string/row_the_second"
+                    android:textOn="@string/row_the_first" />
+
+                <Spinner
+                    android:id="@+id/spinner_1"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="5"
+
+                    android:background="#99807F7F"
+                    android:contentDescription="@string/hide_bottom_view_on_scroll_behavior" />
+
+                <Button
+                    android:id="@+id/move_selector1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="4"
+                    android:alpha="0.95"
+                    android:background="@drawable/woodpecker"
+
+                    android:fontFamily="sans-serif-black"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="@string/char_moves"
+                    android:textColor="#DD000913"
+                    android:textSize="14sp"
+                    android:theme="@android:style/ThemeOverlay.Material.Dark" />
+
+                <!--        <TextView-->
+                <!--            style="@style/alt_text"-->
+                <!--            android:layout_width="0dp"-->
+                <!--            android:layout_height="50dp"-->
+
+                <!--            android:layout_weight="2"-->
+                <!--            android:gravity="right|center"-->
+                <!--            android:text="@string/Lv" />-->
+
+                <!--        <EditText-->
+                <!--            android:id="@+id/edit_text_1"-->
+                <!--            style="@style/alt_text_small"-->
+                <!--            android:layout_width="0dp"-->
+                <!--            android:layout_height="55dp"-->
+
+
+                <!--            android:layout_weight="3.5"-->
+                <!--            android:autofillHints=""-->
+                <!--            android:gravity="center"-->
+                <!--            android:hint="1 - 50"-->
+                <!--            android:inputType="number" />-->
+            </LinearLayout>
+
+            <!-- char selection linear layout 2-->
+            <LinearLayout
+                android:id="@+id/ll_char_selection_2"
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:layout_marginHorizontal="10sp"
+                android:layout_marginVertical="8dp"
+                android:layout_weight="3"
+                android:gravity="center">
+
+                <!--        <TextView-->
+                <!--            style="@style/alt_text_bold"-->
+                <!--            android:layout_width="0dp"-->
+
+                <!--            android:layout_height="50dp"-->
+                <!--            android:layout_weight="2"-->
+                <!--            android:gravity="center"-->
+                <!--            android:text="*" />-->
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_p2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:paddingEnd="15dp"
+                    android:textOff="@string/row_the_second"
+                    android:textOn="@string/row_the_first" />
+
+                <Spinner
+                    android:id="@+id/spinner_2"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="5"
+
+
+                    android:background="#99807F7F"
+                    android:contentDescription="@string/hide_bottom_view_on_scroll_behavior" />
+
+                <Button
+                    android:id="@+id/move_selector2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="4"
+                    android:alpha="0.95"
+                    android:background="@drawable/woodpecker"
+
+                    android:fontFamily="sans-serif-black"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="@string/char_moves"
+                    android:textColor="#DD000913"
+                    android:textSize="14sp"
+                    android:theme="@android:style/ThemeOverlay.Material.Dark" />
+
+                <!--        <TextView-->
+                <!--            style="@style/alt_text"-->
+                <!--            android:layout_width="0dp"-->
+                <!--            android:layout_height="50dp"-->
+
+                <!--            android:layout_weight="2"-->
+                <!--            android:gravity="right|center"-->
+                <!--            android:text="@string/Lv" />-->
+
+                <!--        <EditText-->
+                <!--            android:id="@+id/edit_text_2"-->
+                <!--            style="@style/alt_text_small"-->
+                <!--            android:layout_width="0dp"-->
+                <!--            android:layout_height="55dp"-->
+
+
+                <!--            android:layout_weight="3.5"-->
+                <!--            android:autofillHints=""-->
+                <!--            android:gravity="center"-->
+                <!--            android:hint="1 - 50"-->
+                <!--            android:inputType="number" />-->
+            </LinearLayout>
+
+            <!-- char selection linear layout 3-->
+            <LinearLayout
+                android:id="@+id/ll_char_selection_3"
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:layout_marginVertical="8dp"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp"
+                android:layout_weight="3"
+                android:gravity="center"
+                >
+
+                <!--        <TextView-->
+                <!--            style="@style/alt_text_bold"-->
+                <!--            android:layout_width="0dp"-->
+
+                <!--            android:layout_height="50dp"-->
+                <!--            android:layout_weight="2"-->
+                <!--            android:gravity="center"-->
+                <!--            android:text="*" />-->
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_p3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:paddingEnd="15dp"
+                    android:textOff="@string/row_the_second"
+                    android:textOn="@string/row_the_first" />
+
+                <Spinner
+                    android:id="@+id/spinner_3"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="5"
+
+                    android:background="#99807F7F"
+                    android:contentDescription="@string/hide_bottom_view_on_scroll_behavior" />
+
+                <Button
+                    android:id="@+id/move_selector3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="4"
+                    android:alpha="0.95"
+                    android:background="@drawable/woodpecker"
+
+                    android:fontFamily="sans-serif-black"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="@string/char_moves"
+                    android:textColor="#DD000913"
+                    android:textSize="14sp"
+                    android:theme="@android:style/ThemeOverlay.Material.Dark" />
+                <!--        <TextView-->
+                <!--            style="@style/alt_text"-->
+                <!--            android:layout_width="0dp"-->
+                <!--            android:layout_height="50dp"-->
+
+                <!--            android:layout_weight="2"-->
+                <!--            android:gravity="right|center"-->
+                <!--            android:text="@string/Lv" />-->
+                <!---->
+                <!--        <EditText-->
+                <!--            android:id="@+id/edit_text_3"-->
+                <!--            style="@style/alt_text_small"-->
+                <!--            android:layout_width="0dp"-->
+                <!--            android:layout_height="55dp"-->
+
+
+                <!--            android:layout_weight="3.5"-->
+                <!--            android:autofillHints=""-->
+                <!--            android:gravity="center"-->
+                <!--            android:hint="1 - 50"-->
+                <!--            android:inputType="number"-->
+                <!--            android:contentDescription="@string/hide_bottom_view_on_scroll_behavior"/>-->
+            </LinearLayout>
+
+            <!-- char selection linear layout 4-->
+            <LinearLayout
+                android:id="@+id/ll_char_selection_4"
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:visibility="gone"
+                android:layout_marginVertical="8dp"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp"
+                android:layout_weight="3"
+                android:gravity="center">
+
+                <!--        <TextView-->
+                <!--            style="@style/alt_text_bold"-->
+                <!--            android:layout_width="0dp"-->
+
+                <!--            android:layout_height="50dp"-->
+                <!--            android:layout_weight="2"-->
+                <!--            android:gravity="center"-->
+                <!--            android:text="*" />-->
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_p4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:paddingEnd="15dp"
+                    android:textOff="@string/row_the_second"
+                    android:textOn="@string/row_the_first" />
+
+                <Spinner
+                    android:id="@+id/spinner_4"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="5"
+
+
+                    android:background="#99807F7F"
+                    android:contentDescription="@string/hide_bottom_view_on_scroll_behavior" />
+
+                <Button
+                    android:id="@+id/move_selector4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="4"
+                    android:alpha="0.95"
+                    android:background="@drawable/woodpecker"
+
+                    android:fontFamily="sans-serif-black"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="@string/char_moves"
+                    android:textColor="#DD000913"
+                    android:textSize="14sp"
+                    android:theme="@android:style/ThemeOverlay.Material.Dark" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <View
+        android:id="@+id/halfsies"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:background="#3B000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+
+    <TextView
+        android:id="@+id/next_group_header"
+        style="@style/alt_text_bold2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toEndOf="@id/halfsies"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/player_num_tv"
+        app:layout_constraintHorizontal_bias="0.12"
+        android:text="Next Skirmish:"
+        android:gravity="center_vertical"/>
+
+    <FrameLayout
+        android:id="@+id/leader_image_framelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginVertical="10dp"
+
+        app:layout_constraintTop_toBottomOf="@id/next_group_header"
+        app:layout_constraintStart_toEndOf="@id/halfsies">
+
+        <ImageView
+            android:layout_width="69dp"
+            android:layout_height="80dp"
+            android:rotation="90"
+            android:background="@drawable/sign"/>
+
+        <ImageView
+            android:id="@+id/group_leader_imageview"
+            android:layout_width="40dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:alpha="0.85"
+            android:clickable="true"
+            android:background="@drawable/suneki"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/group_details_ll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/leader_image_framelayout"
+        app:layout_constraintTop_toBottomOf="@id/next_group_header">
+
+        <TextView
+            android:id="@+id/group_header_tv"
+            style="@style/alt_text_bold2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:gravity="start"
+
+            android:textSize="16sp"
+            android:text="Team Suneki"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/alt_text_small2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="5dp"
+                android:layout_marginStart="20dp"
+                android:gravity="start"
+
+                android:textSize="13sp"
+                android:text="Group Type:"/>
+
+            <TextView
+                android:id="@+id/group_type_tv"
+                style="@style/alt_text_bold2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="5dp"
+                android:layout_marginStart="15dp"
+                android:gravity="start"
+
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:text="Offensive"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/background_greys"
+        app:layout_constraintStart_toStartOf="@id/next_group_header"
+        app:layout_constraintTop_toBottomOf="@id/leader_image_framelayout">
+
+        <TextView
+            android:id="@+id/difficulty_tv"
+            style="@style/alt_text_bold2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+
+            android:text="Strength Value:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/diff_num_tv"
+            style="@style/alt_text_bold2"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+
+            android:gravity="center"
+            android:text="16"
+            app:layout_constraintStart_toEndOf="@id/player_char_count_tv"
+            app:layout_constraintTop_toTopOf="@id/player_char_count_tv" />
+    </LinearLayout>
+
+
+    <pl.droidsonroids.gif.GifImageButton
+        android:id="@+id/back_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+
+        android:background="@drawable/back_gif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <FrameLayout
+        android:id="@+id/char_overview_button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintVertical_bias="0.97">
+
+        <ImageButton
+            android:id="@+id/start_button"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:background="@drawable/sign"
+            android:contentDescription="@string/start_game"
+            android:foreground="?android:attr/selectableItemBackground"
+
+            android:padding="10sp"
+            android:theme="@android:style/ThemeOverlay.Material.Dark" />
+
+        <TextView
+            style="@style/normal_text_bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+
+            android:clickable="false"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="@string/start_game"
+            android:textSize="20sp" />
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

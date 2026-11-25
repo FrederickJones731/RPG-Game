@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:id="@+id/attack_layout"
+    tools:context=".fight.attackPickerLayout">
+
+
+
+    <LinearLayout
+        android:id="@+id/attack_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92">
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/flimbo"
+
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="8dp"
+            android:paddingStart="13dp"
+            android:padding="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/attack_button_layout">
+
+            <TextView
+                android:id="@+id/action_remaining_tv"
+                style="@style/alt_text_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:textSize="16dp"
+                android:text="Actions Remaining:"
+                android:textStyle="italic"
+                android:textColor="#D52E0070" />
+            <TextView
+                android:id="@+id/actions_remaining_count"
+                style="@style/alt_text_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/grooy"
+
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="3dp"
+                android:layout_marginHorizontal="8dp"
+
+                android:textSize="20dp"
+                android:text="4"
+                android:textColor="#D52E0070"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topLL"
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:layout_margin="5dp"
+            android:gravity="center"
+
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.785">
+
+            <Button
+                android:id="@+id/hp_potion"
+                android:layout_width="55sp"
+                android:layout_height="40sp"
+
+                android:background="@drawable/buttonback"
+                android:fontFamily="monospace"
+                android:theme="@android:style/ThemeOverlay.Material.Dark"
+                android:foreground="?android:attr/selectableItemBackground"
+
+                android:text="@string/HP"
+                android:textColor="#000000"
+                android:textSize="15sp"
+
+                app:layout_constraintBottom_toBottomOf="@id/sp_potion"
+                app:layout_constraintHorizontal_bias="0.045"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <Button
+                android:id="@+id/row_action"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:layout_marginEnd="25sp"
+
+                android:background="@drawable/buttonback"
+                android:fontFamily="monospace"
+
+                android:text="@string/row"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:theme="@android:style/ThemeOverlay.Material.Dark"
+                android:foreground="?android:attr/selectableItemBackground"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/special_button1" />
+
+
+
+<!--            <Button-->
+<!--                android:id="@+id/guard_action"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="50sp"-->
+<!--                android:layout_marginRight="20sp"-->
+
+<!--                android:background="@drawable/buttonback"-->
+<!--                android:fontFamily="monospace"-->
+
+<!--                android:text="@string/guard"-->
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="15sp"-->
+
+<!--                app:layout_constraintBottom_toBottomOf="@id/focus_action"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/normal_attack" />-->
+
+            <Button
+                android:id="@+id/special_button1"
+                android:layout_width="wrap_content"
+                android:layout_height="55sp"
+
+
+                android:background="@drawable/buttonback"
+                android:fontFamily="monospace"
+
+                android:text="@string/attack"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:theme="@android:style/ThemeOverlay.Material.Dark"
+                android:foreground="?android:attr/selectableItemBackground"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/wait_action"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:layout_marginStart="25sp"
+
+                android:background="@drawable/buttonback"
+                android:fontFamily="monospace"
+                android:theme="@android:style/ThemeOverlay.Material.Dark"
+                android:foreground="?android:attr/selectableItemBackground"
+
+                android:text="Wait"
+                android:textColor="#000000"
+                android:textSize="15sp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/special_button1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+<!--            <Button-->
+<!--                android:id="@+id/assist_action"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="50sp"-->
+<!--                android:layout_marginLeft="10sp"-->
+
+<!--                android:background="@drawable/buttonback"-->
+<!--                android:fontFamily="monospace"-->
+
+<!--                android:text="@string/focus"-->
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="15sp"-->
+
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/focus_action"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+            <Button
+                android:id="@+id/sp_potion"
+                android:layout_width="55sp"
+                android:layout_height="40sp"
+
+                android:background="@drawable/buttonback"
+                android:fontFamily="monospace"
+                android:theme="@android:style/ThemeOverlay.Material.Dark"
+                android:foreground="?android:attr/selectableItemBackground"
+
+                android:text="@string/SP"
+                android:textColor="#000000"
+                android:textSize="15sp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.955"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="5sp"
+            android:gravity="center_vertical"
+
+            android:layout_marginTop="5dp"
+
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topLL">
+
+            <Button
+                android:id="@+id/action1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+
+
+                android:background="@drawable/buttonback"
+                android:fontFamily="monospace"
+                android:text="@string/action1"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="60dp"
+                android:theme="@android:style/ThemeOverlay.Material.Dark"
+                android:foreground="?android:attr/selectableItemBackground"
+
+                app:layout_constraintBottom_toBottomOf="@+id/action2"
+                app:layout_constraintEnd_toStartOf="@+id/action2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/action2" />
+
+            <Button
+                android:id="@+id/action2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+
+                android:layout_marginHorizontal="30dp"
+
+                android:background="@drawable/buttonback"
+                android:fontFamily="monospace"
+                android:text="@string/action2"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:theme="@android:style/ThemeOverlay.Material.Dark"
+                android:foreground="?android:attr/selectableItemBackground"
+
+                app:layout_constraintBottom_toBottomOf="@+id/action3"
+                app:layout_constraintEnd_toStartOf="@+id/action5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/action1"
+                app:layout_constraintTop_toTopOf="@+id/action3" />
+
+            <Button
+                android:id="@+id/action5"
+                android:layout_width="wrap_content"
+                android:layout_height="0sp"
+
+                android:background="@drawable/buttonback"
+                android:fontFamily="monospace"
+                android:theme="@android:style/ThemeOverlay.Material.Dark"
+                android:foreground="?android:attr/selectableItemBackground"
+
+                android:text="Action5"
+                android:textColor="#000000"
+                android:textSize="12sp"
+
+                app:layout_constraintBottom_toBottomOf="@id/action2"
+                app:layout_constraintStart_toEndOf="@+id/action2"
+                app:layout_constraintEnd_toStartOf="@+id/action3"
+                app:layout_constraintTop_toTopOf="@id/action2" />
+
+            <Button
+                android:id="@+id/action3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:theme="@android:style/ThemeOverlay.Material.Dark"
+                android:foreground="?android:attr/selectableItemBackground"
+
+                android:background="@drawable/buttonback"
+                android:fontFamily="monospace"
+                android:text="@string/action3"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/action4"
+                app:layout_constraintEnd_toStartOf="@+id/action4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/action5"
+                app:layout_constraintTop_toTopOf="@+id/action4" />
+
+            <Button
+                android:id="@+id/action4"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+
+                android:layout_marginStart="29dp"
+                android:layout_marginEnd="60dp"
+                android:theme="@android:style/ThemeOverlay.Material.Dark"
+                android:foreground="?android:attr/selectableItemBackground"
+
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/buttonback"
+                android:fontFamily="monospace"
+                android:text="@string/action4"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/action3" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/hide_attack_layout_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/buttonback"
+        android:foreground="@drawable/pointer"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/screen_blocker"
+        android:elevation="100dp"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

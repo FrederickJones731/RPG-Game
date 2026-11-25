@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="15dp"
+
+    android:paddingVertical="10dp"
+    tools:context=".prep.moveSelector">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.85"
+        android:background="@drawable/ic_launcher_background"
+        android:elevation="0dp" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/alt_text_header"
+        android:layout_width="0dp"
+
+        android:layout_height="60dp"
+        android:layout_marginEnd="50dp"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+
+        android:text="@string/char_moves"
+        app:layout_constraintEnd_toStartOf="@+id/back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <pl.droidsonroids.gif.GifImageButton
+        android:id="@+id/back_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="6dp"
+        android:layout_marginStart="50dp"
+
+        android:elevation="30dp"
+        android:background="@drawable/back_gif"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/randomize_moves_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+        <TextView
+            style="@style/alt_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:layout_marginStart="5dp"
+            android:textSize="19sp"
+            android:text="Randomize Moves:"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/randomize_moves_switch"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+
+            android:checked="false"/>
+
+        <TextView
+            android:id="@+id/randomize_moves_tv"
+            style="@style/alt_text_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:layout_marginStart="12dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="Choose"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="540dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingHorizontal="10dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/randomize_moves_ll">
+
+
+        <LinearLayout
+            android:id="@+id/move_holder_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/clicker"
+        android:clickable="true"
+        android:elevation="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

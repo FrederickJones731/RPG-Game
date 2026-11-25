@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        style="@style/alt_text_bold2"
+        android:id="@+id/onset_row_num"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="10dp"
+        android:padding="6dp"
+        android:background="@drawable/background_greys"
+
+        android:textSize="28sp"
+        android:text="4"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/onset_spinner"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="7dp"
+        android:layout_marginVertical="10dp"
+
+        android:background="#959494"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/onset_row_num"/>
+
+    <ImageView
+        android:id="@+id/onset_icon_affinity"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/symbol_fire"
+
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/onset_spinner"/>
+
+    <ImageView
+        android:id="@+id/onset_icon_weapon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/symbol_sword"
+
+        android:layout_marginStart="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/onset_icon_affinity"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="18dp"
+        android:gravity="center"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/onset_icon_weapon">
+
+        <TextView
+            android:id="@+id/onset_hpbar"
+            android:layout_width="120sp"
+            android:layout_height="22sp"
+            android:background="@drawable/hpbar"
+            android:gravity="center"
+
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="20/20"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.48"
+            app:layout_constraintStart_toEndOf="@id/onset_icon_weapon"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/onset_spbar"
+            android:layout_width="120sp"
+            android:layout_height="22sp"
+            android:background="@drawable/spbar"
+            android:gravity="center"
+
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="65/65"
+
+            app:layout_constraintTop_toBottomOf="@id/current_char_hpbar"
+            app:layout_constraintStart_toStartOf="@id/current_char_hpbar"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4sp"
+    tools:context=".overview.encyclofrag_bases">
+
+
+    <TextView
+        android:id="@+id/current_char_name"
+        style="@style/normal_text_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18sp"
+        android:layout_marginTop="16sp"
+
+        android:text="Dumwan's Bases"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/class_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/scrollView"
+        app:layout_constraintTop_toBottomOf="@id/current_char_name"
+        app:layout_constraintVertical_bias="0.3">
+
+        <TextView
+            android:id="@+id/current_char_class1"
+            style="@style/normal_text"
+            android:layout_width="155sp"
+            android:layout_height="match_parent"
+            android:background="@drawable/woodpecker"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="Lycan Heir" />
+
+        <TextView
+            style="@style/normal_text"
+            android:layout_width="40sp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="->" />
+
+        <TextView
+            android:id="@+id/current_char_class2"
+            style="@style/normal_text"
+            android:layout_width="155sp"
+            android:layout_height="match_parent"
+            android:background="@drawable/lowen"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="Vampiric Overlord"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/top_breaker"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_marginTop="18dp"
+        android:background="#C8656565"
+        app:layout_constraintBottom_toTopOf="@id/scrollView"
+        app:layout_constraintTop_toBottomOf="@id/class_ll" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/bottom_breaker"
+        app:layout_constraintTop_toBottomOf="@id/top_breaker">
+
+
+        <declatoration.simulatorial.overview.encyclofragStatTable
+            android:id="@+id/table_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </declatoration.simulatorial.overview.encyclofragStatTable>
+
+
+    </ScrollView>
+
+
+    <View
+        android:id="@+id/bottom_breaker"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#C8656565"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

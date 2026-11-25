@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".settei">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/avatar_city"
+        android:alpha="0.7"
+        android:contentDescription="@string/block" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/Title"
+            android:layout_width="300dp"
+
+            android:layout_height="55dp"
+            android:background="@drawable/redrivium"
+            android:text="@string/optionizifications"
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.02" />
+
+        <pl.droidsonroids.gif.GifImageButton
+            android:id="@+id/back_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="15dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:alpha="0.85"
+            android:background="@drawable/back_gif"/>
+
+        <TextView
+            android:id="@+id/main_screen_tv"
+            style="@style/alt_text"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/redrivium"
+            android:text="@string/main_screen_theme"
+            android:textSize="20sp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <LinearLayout
+            android:id="@+id/main_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="45dp"
+            android:layout_marginVertical="15dp"
+            android:gravity="center"
+            android:background="@drawable/redrivium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/main_screen_tv">
+
+            <ImageButton
+                android:id="@+id/music_id_down_button"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/down_arrow"
+                android:rotation="90"
+                android:alpha="0.8"
+                android:src="@drawable/dark_redoo" />
+
+            <TextView
+                android:id="@+id/music_num_tv"
+                style="@style/alt_text"
+                android:layout_width="40dp"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="55dp"
+                android:text="3"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+            <ImageButton
+                android:id="@+id/music_id_up_button"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/up_arrow"
+                android:rotation="90"
+                android:alpha="0.8"
+                android:src="@drawable/groen" />
+
+            <ImageButton
+                android:id="@+id/main_theme_projector"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/background_greys"
+                android:layout_marginHorizontal="26dp"
+                android:foreground="@drawable/play"
+                android:layout_gravity="center"
+                android:contentDescription="@string/phys_avo"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/settings_music_tv"
+            style="@style/alt_text"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/redrivium"
+            android:text="Settings Screen Music:"
+            android:textSize="20sp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/main_ll" />
+
+        <LinearLayout
+            android:id="@+id/settings_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="45dp"
+            android:layout_marginVertical="15dp"
+            android:gravity="center"
+            android:background="@drawable/redrivium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settings_music_tv">
+
+            <ImageButton
+                android:id="@+id/settings_down_button"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/down_arrow"
+                android:rotation="90"
+                android:alpha="0.8"
+                android:src="@drawable/dark_redoo"
+                android:contentDescription="@string/phys_avo" />
+
+            <TextView
+                android:id="@+id/settings_num_tv"
+                style="@style/alt_text"
+                android:layout_width="40dp"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="55dp"
+                android:text="1"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+            <ImageButton
+                android:id="@+id/settings_up_button"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/up_arrow"
+                android:rotation="90"
+                android:alpha="0.8"
+                android:src="@drawable/groen" />
+
+
+            <ImageButton
+                android:id="@+id/settings_theme_projector"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/background_greys"
+                android:layout_marginHorizontal="26dp"
+                android:foreground="@drawable/play"
+                android:layout_gravity="center"
+                android:contentDescription="@string/phys_avo"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/background_tv"
+            style="@style/alt_text"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/redrivium"
+            android:text="Main Screen Background:"
+            android:textSize="20sp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settings_ll" />
+
+        <LinearLayout
+            android:id="@+id/background_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="45dp"
+            android:layout_marginVertical="15dp"
+            android:gravity="center"
+            android:background="@drawable/redrivium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/background_tv">
+
+            <ImageButton
+                android:id="@+id/background_down_button"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/down_arrow"
+                android:rotation="90"
+                android:alpha="0.8"
+                android:src="@drawable/dark_redoo" />
+
+            <TextView
+                android:id="@+id/background_num_tv"
+                style="@style/alt_text"
+                android:layout_width="40dp"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="55dp"
+                android:text="1"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+            <ImageButton
+                android:id="@+id/background_up_button"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/up_arrow"
+                android:rotation="90"
+                android:alpha="0.8"
+                android:src="@drawable/groen"
+                android:contentDescription="@string/phys_avo" />
+
+            <ImageButton
+                android:id="@+id/background_projector"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:foreground="@drawable/apply"
+                android:background="@drawable/background_greys"
+                android:layout_marginHorizontal="26dp"
+                android:rotation="135"
+                android:layout_gravity="center"
+                android:contentDescription="@string/phys_avo"/>
+        </LinearLayout>
+
+
+
+        <View
+            android:id="@+id/incisor"
+            android:layout_width="3dp"
+            android:layout_height="350dp"
+            android:background="#B2676767"
+            app:layout_constraintStart_toStartOf="@id/title"
+            app:layout_constraintEnd_toEndOf="@id/title"
+            app:layout_constraintTop_toBottomOf="@id/title"/>
+
+
+        <TextView
+            android:id="@+id/clash_tv"
+            style="@style/alt_text"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/redrivium"
+            android:text="Clash Reaction Mode:"
+            android:textSize="20sp"
+
+            app:layout_constraintStart_toEndOf="@id/incisor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <LinearLayout
+            android:id="@+id/clash_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="45dp"
+            android:layout_marginVertical="10dp"
+            android:gravity="center"
+            android:background="@drawable/redrivium"
+            app:layout_constraintStart_toEndOf="@id/incisor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clash_tv">
+
+            <ImageButton
+                android:id="@+id/clash_down_button"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/down_arrow"
+                android:rotation="90"
+                android:alpha="0.8"
+                android:src="@drawable/dark_redoo" />
+
+            <TextView
+                android:id="@+id/clash_mode_tv"
+                style="@style/alt_text"
+                android:layout_width="100dp"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="55dp"
+                android:text="NONE"
+                android:textStyle="bold"
+                android:textColor="#073202"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+            <ImageButton
+                android:id="@+id/clash_up_button"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/up_arrow"
+                android:rotation="90"
+                android:alpha="0.8"
+                android:src="@drawable/groen"
+                android:contentDescription="@string/phys_avo" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/text_bubble_ex"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="15dp"
+            android:paddingHorizontal="14dp"
+            android:paddingBottom="27dp"
+            android:paddingTop="10dp"
+            android:gravity="top"
+            android:orientation="vertical"
+
+            app:layout_constraintStart_toEndOf="@id/incisor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clash_ll"
+            app:layout_constraintBottom_toTopOf="@id/apply_changes_button">
+
+
+            <TextView
+                android:id="@+id/clash_mode_title_tv"
+                style="@style/alt_text_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="19dp"
+                android:text="Mode 1: None -" />
+
+            <TextView
+                android:id="@+id/clash_mode_desc_tv"
+                style="@style/alt_text_small"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginHorizontal="15dp"
+                android:gravity="top"
+                android:textSize="16dp"
+                android:text="Hi so this is some more text this is long just to fill in space and see how this looks like." />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/apply_changes_button"
+            style="@style/alt_text_bold"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginVertical="18dp"
+
+            android:background="@drawable/lowen"
+            android:text="@string/apply"
+
+            app:layout_constraintStart_toEndOf="@id/incisor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

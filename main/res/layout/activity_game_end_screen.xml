@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fem_wizard"
+    android:id="@+id/background_end_screen"
+    tools:context=".fight.gameEndScreen">
+
+    <TextView
+        style="@style/alt_text"
+        android:id="@+id/turn_num_tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+
+        android:text="@string/turn_count"
+
+        android:layout_marginStart="12sp"
+        android:layout_marginTop="6sp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        style="@style/alt_text_bold"
+        android:id="@+id/turn_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+
+        android:text="24"
+
+        android:layout_marginTop="6sp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/turn_num_tv_text"/>
+
+
+    <TextView
+        style="@style/Title"
+        android:id="@+id/title"
+        android:layout_width="300sp"
+        android:layout_height="180sp"
+        android:background="@drawable/buttonback"
+        android:gravity="center"
+        android:text="@string/player_win"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.12" />
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/dancefest"
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+
+        android:src="@drawable/greens"
+        android:alpha="0.92"
+        android:visibility="gone"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toTopOf="@id/end_button_layout"
+        android:contentDescription="dance" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/sad_boi"
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+
+        android:src="@drawable/shinji_sad"
+        android:alpha="0.92"
+        android:visibility="gone"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.55"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toTopOf="@id/end_button_layout"
+        android:contentDescription="dance" />
+
+
+    <FrameLayout
+        android:id="@+id/end_button_layout"
+        android:layout_width="220sp"
+        android:layout_height="100sp"
+
+        app:layout_constraintVertical_bias="0.9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/end_button"
+            android:layout_width="220sp"
+            android:layout_height="100sp"
+            android:theme="@android:style/ThemeOverlay.Material.Dark"
+            android:foreground="?android:attr/selectableItemBackground"
+
+            android:background="@drawable/sign"
+            android:contentDescription="@string/start_game" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:clickable="false"
+
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="@string/back_to_main_button"
+            android:textColor="#0E2E1D"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

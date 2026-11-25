@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="700dp"
+    android:layout_height="700dp"
+    android:gravity="center"
+    android:background="#59000000"
+    android:layout_gravity="right"
+    android:rotation="90">
+
+
+    <Button
+        android:id="@+id/action1"
+        android:layout_width="80sp"
+        android:layout_height="80dp"
+
+        android:textSize="25sp"
+        android:textColor="@color/teal_200"
+        android:text="ppppp"
+        android:fontFamily="casual"
+        android:background="#86F6DB30"
+
+        android:layout_margin="8sp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/action2"
+        android:layout_width="90sp"
+        android:layout_height="90sp"
+
+        android:textSize="25sp"
+        android:textColor="@color/teal_200"
+        android:text="ppppp"
+        android:fontFamily="casual"
+        android:background="#86F6DB30"
+
+        android:layout_margin="10sp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/special_button1"
+        android:layout_width="200sp"
+        android:layout_height="100sp"
+
+        android:textSize="25sp"
+        android:textColor="@color/teal_200"
+        android:text="ppppp"
+        android:fontFamily="casual"
+        android:background="#86F6DB30"
+
+        android:layout_margin="15sp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/action3"
+        android:layout_width="90sp"
+        android:layout_height="90sp"
+
+        android:textSize="25sp"
+        android:textColor="@color/teal_200"
+        android:text="ppppp"
+        android:fontFamily="casual"
+        android:background="#86F6DB30"
+
+        android:layout_margin="10sp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/action4"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+
+        android:textSize="25sp"
+        android:textColor="@color/teal_200"
+        android:text="ppppp"
+        android:fontFamily="casual"
+        android:background="#86F6DB30"
+
+        android:layout_margin="8sp"
+        android:gravity="center"/>
+
+
+</LinearLayout>

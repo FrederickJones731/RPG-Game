@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/stat_card"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/grass">
+
+    <!--char details layout-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/char_deet_layout"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@id/stat_sv"
+        android:background="#F6DC8F">
+
+
+        <ImageView
+            android:id="@+id/stat_card_affinity_icon"
+            android:layout_width="36sp"
+            android:layout_height="36sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="11sp"
+            android:contentDescription="@string/turn_count"
+            app:flow_verticalBias="0.98"
+
+            app:layout_constraintBottom_toBottomOf="@id/stat_card_name"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/stat_card_name"
+            style="@style/normal_text_header"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14sp"
+            android:layout_weight="5"
+
+            android:text="Luxana"
+            android:textSize="28sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/stat_card_affinity_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.24" />
+
+
+        <TextView
+            android:id="@+id/stat_card_char_class"
+
+            style="@style/normal_text"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12sp"
+            android:layout_marginTop="15sp"
+            android:text="Apprentice"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/stat_card_affinity_icon"
+            app:layout_constraintTop_toBottomOf="@id/stat_card_name" />
+
+        <ImageView
+            android:id="@+id/stat_card_weapon_icon"
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="11sp"
+            android:alpha="0.91"
+            android:background="@drawable/weapon_icon_healing"
+            android:contentDescription="@string/turn_count"
+
+            app:layout_constraintBottom_toBottomOf="@id/stat_card_char_class"
+            app:layout_constraintStart_toEndOf="@id/stat_card_char_class"
+            app:layout_constraintTop_toTopOf="@id/stat_card_char_class" />
+
+        <TextView
+            android:id="@+id/stat_card_hpbar"
+            android:layout_width="120sp"
+            android:layout_height="18sp"
+            android:layout_marginStart="15sp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/hpbar"
+            android:fontFamily="sans-serif"
+
+            android:gravity="center"
+            android:text="20/20"
+            android:textSize="16sp"
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.64" />
+
+        <TextView
+            android:id="@+id/stat_card_spbar"
+            android:layout_width="120sp"
+            android:layout_height="18sp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/spbar"
+            android:fontFamily="sans-serif"
+
+            android:gravity="center"
+            android:text="65/65"
+            android:textSize="16sp"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="@id/stat_card_hpbar"
+            app:layout_constraintTop_toBottomOf="@id/stat_card_hpbar" />
+
+        <TextView
+            android:id="@+id/stat_card_level"
+
+            style="@style/normal_text"
+            android:layout_width="0sp"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_weight="2"
+            android:text="Lv. 4"
+
+            app:layout_constraintEnd_toEndOf="@id/stat_card_hpbar"
+            app:layout_constraintBottom_toBottomOf="@id/stat_card_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--        stat table-->
+
+    <TableLayout
+        android:id="@+id/stats_layout"
+        android:layout_width="380dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/char_deet_layout"
+        android:weightSum="30.5"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="#63ECB5">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5">
+
+
+            <TextView
+                style="@style/alt_text_bold"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="60"
+                android:background="@drawable/stat_card_blue"
+                android:gravity="center"
+                android:text="@string/atk"
+                android:textColor="#D5000000" />
+
+
+            <TextView
+
+                android:id="@+id/stat_card_atk_val"
+                style="@style/alt_text_bold"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:layout_weight="68"
+                android:gravity="right"
+                android:paddingEnd="15dp"
+                android:maxLines="1"
+
+                android:text="69"
+                android:textColor="#D5000000" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:background="#4A323131" />
+
+            <TextView
+                style="@style/alt_text_bold"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="60"
+                android:background="@drawable/stat_card_blue"
+                android:gravity="center"
+                android:text="@string/def"
+                android:textColor="#D5000000" />
+
+
+            <TextView
+                android:id="@+id/stat_card_def_val"
+                style="@style/alt_text_bold"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:layout_weight="68"
+                android:maxLines="1"
+                android:gravity="right"
+                android:paddingEnd="15dp"
+
+                android:text="69"
+                android:textColor="#D5000000" />
+
+
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_weight="0.1"
+            android:background="#4A323131" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5">
+
+
+            <TextView
+                style="@style/alt_text_bold"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="60"
+                android:background="@drawable/stat_card_blue"
+                android:gravity="center"
+                android:text="@string/mag"
+                android:textColor="#D5000000" />
+
+
+            <TextView
+                android:id="@+id/stat_card_mag_val"
+                style="@style/alt_text_bold"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:layout_weight="68"
+                android:maxLines="1"
+                android:gravity="right"
+                android:paddingEnd="15dp"
+
+                android:text="69"
+                android:textColor="#D5000000" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:background="#4A323131" />
+
+            <TextView
+                style="@style/alt_text_bold"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="60"
+                android:background="@drawable/stat_card_blue"
+                android:gravity="center"
+                android:text="@string/intellect"
+                android:textColor="#D5000000" />
+
+
+            <TextView
+                android:id="@+id/stat_card_int_val"
+                style="@style/alt_text_bold"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:layout_weight="68"
+                android:maxLines="1"
+                android:gravity="right"
+                android:paddingEnd="15dp"
+
+                android:text="69"
+                android:textColor="#D5000000" />
+
+
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_weight="0.1"
+            android:background="#4A323131" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5">
+
+
+            <TextView
+                style="@style/alt_text_bold"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="60"
+                android:background="@drawable/stat_card_blue"
+                android:gravity="center"
+                android:text="@string/spd"
+                android:textColor="#D5000000" />
+
+
+            <TextView
+                android:id="@+id/stat_card_spd_val"
+                style="@style/alt_text_bold"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:layout_weight="68"
+                android:maxLines="1"
+                android:gravity="right"
+                android:paddingEnd="15dp"
+
+                android:text="69"
+                android:textColor="#D5000000" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:background="#4A323131" />
+
+            <TextView
+                style="@style/alt_text_bold"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="60"
+                android:background="@drawable/stat_card_blue"
+                android:gravity="center"
+                android:text="@string/lck"
+                android:textColor="#D5000000" />
+
+
+            <TextView
+                android:id="@+id/stat_card_lck_val"
+                style="@style/alt_text_bold"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:layout_weight="68"
+                android:maxLines="1"
+                android:gravity="right"
+                android:paddingEnd="15dp"
+
+                android:text="69"
+                android:textColor="#D5000000" />
+
+
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_weight="0.1"
+            android:background="#4A323131" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5">
+
+
+            <TextView
+                style="@style/alt_text_bold"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="60"
+                android:background="@drawable/stat_card_blue"
+                android:gravity="center"
+                android:text="@string/hit"
+                android:textColor="#D5000000" />
+
+
+            <TextView
+                android:id="@+id/stat_card_hit_val"
+                style="@style/alt_text_bold"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:layout_weight="68"
+                android:maxLines="1"
+                android:gravity="right"
+                android:paddingEnd="15dp"
+
+                android:text="69"
+                android:textColor="#D5000000" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:background="#4A323131" />
+
+            <TextView
+                style="@style/alt_text_bold"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="60"
+                android:background="@drawable/stat_card_blue"
+                android:gravity="center"
+                android:text="@string/crit"
+                android:textColor="#D5000000" />
+
+
+            <TextView
+                android:id="@+id/stat_card_crit_val"
+                style="@style/alt_text_bold"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:layout_weight="68"
+                android:maxLines="1"
+                android:gravity="right"
+                android:paddingEnd="15dp"
+
+                android:text="69"
+                android:textColor="#D5000000" />
+
+
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_weight="0.1"
+            android:background="#4A323131" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5">
+
+
+            <TextView
+                style="@style/alt_text_bold"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+
+                android:layout_weight="60"
+                android:maxLines="1"
+                android:background="@drawable/stat_card_blue"
+                android:gravity="center"
+                android:text="@string/phys_avo"
+                android:textColor="#D5000000"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/stat_card_phys_avo_val"
+                style="@style/alt_text_bold"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="68"
+                android:maxLines="1"
+                android:gravity="right"
+                android:paddingEnd="15dp"
+
+                android:text="69"
+                android:textColor="#D5000000" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:background="#4A323131" />
+
+            <TextView
+                style="@style/alt_text_bold"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+
+                android:layout_weight="60"
+                android:background="@drawable/stat_card_blue"
+                android:gravity="center"
+                android:text="@string/mag_avo"
+                android:textColor="#D5000000"
+                android:textSize="14dp" />
+
+
+            <TextView
+                android:id="@+id/stat_card_mag_avo_val"
+                style="@style/alt_text_bold"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="68"
+                android:maxLines="1"
+                android:gravity="right"
+                android:paddingEnd="15dp"
+
+                android:text="69"
+                android:textColor="#D5000000" />
+
+
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_weight="0.1"
+            android:background="#4A323131" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5">
+
+
+            <TextView
+                style="@style/alt_text_bold"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="60"
+                android:background="@drawable/stat_card_blue"
+                android:gravity="center"
+                android:text="@string/block"
+                android:textColor="#D5000000" />
+
+
+            <TextView
+                android:id="@+id/stat_card_block_val"
+                style="@style/alt_text_bold"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:layout_weight="68"
+                android:maxLines="1"
+                android:gravity="right"
+                android:paddingEnd="15dp"
+
+                android:text="69"
+                android:textColor="#D5000000" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:background="#4A323131" />
+
+            <TextView
+                style="@style/alt_text_bold"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="60"
+                android:background="@drawable/stat_card_blue"
+                android:gravity="center"
+                android:text="@string/res"
+                android:textColor="#D5000000" />
+
+
+            <TextView
+                android:id="@+id/stat_card_res_val"
+                style="@style/alt_text_bold"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:layout_weight="68"
+                android:maxLines="1"
+                android:gravity="right"
+                android:paddingEnd="15dp"
+
+                android:text="69"
+                android:textColor="#D5000000" />
+
+
+        </TableRow>
+
+
+    </TableLayout>
+
+
+    <!--    stat buffs and debuffs-->
+
+    <ScrollView
+        android:id="@+id/stat_sv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/stats_layout">
+
+        <LinearLayout
+            android:id="@+id/stat_buff_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#9B33D3">
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!--    conditions and such-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conditions_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_above="@id/stat_sv"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/stats_layout"
+        android:background="#FF7C9B"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <pl.droidsonroids.gif.GifImageButton
+            android:id="@+id/back_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/back_gif"
+            android:contentDescription="@string/second_fragment_label"
+
+            android:theme="@android:style/ThemeOverlay.Material.Dark"
+            android:foreground="?android:attr/selectableItemBackground"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <ScrollView
+            android:layout_width="270dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/stat_card_condition_pane"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    style="@style/alt_text_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+
+                    android:gravity="start"
+                    android:text="Conditions / Status Effects"
+                    android:textColor="#D5000000"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

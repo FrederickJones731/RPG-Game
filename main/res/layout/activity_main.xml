@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grasses_good"
+    android:padding="10sp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spbar"
+
+
+        android:padding="25sp"
+        android:text="@string/title"
+        style="@style/Title"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/dancefest"
+        android:layout_width="140sp"
+        android:layout_height="90sp"
+
+        android:alpha="0.92"
+        android:src="@drawable/dance_guys_dx"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toTopOf="@id/start_button_layout"
+        android:contentDescription="dance" />
+
+
+    <Button
+        android:id="@+id/war_room_button"
+        android:layout_width="110sp"
+        android:layout_height="40sp"
+        android:layout_margin="15dp"
+        android:gravity="center"
+
+        android:text="test warz"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"/>
+
+    <FrameLayout
+        android:id="@+id/start_button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="130sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <ImageButton
+            android:id="@+id/start_button"
+            android:layout_width="280sp"
+            android:layout_height="120sp"
+
+            android:theme="@android:style/ThemeOverlay.Material.Dark"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:background="@drawable/sign"
+            android:contentDescription="@string/start_game" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:clickable="false"
+
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="@string/start_game"
+            android:textColor="#0E2E1D"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/char_overview_button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_button_layout">
+
+        <ImageButton
+            android:id="@+id/char_overview_button"
+            android:layout_width="280sp"
+            android:layout_height="120sp"
+            android:theme="@android:style/ThemeOverlay.Material.Dark"
+            android:foreground="?android:attr/selectableItemBackground"
+
+            android:background="@drawable/sign"
+            android:contentDescription="@string/character_overview" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:clickable="false"
+
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="@string/character_overview"
+            android:textColor="#0E2E1D"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/settings_button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/char_overview_button_layout">
+
+        <ImageButton
+            android:id="@+id/settings_button"
+            android:layout_width="280sp"
+            android:layout_height="120sp"
+
+            android:theme="@android:style/ThemeOverlay.Material.Dark"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:background="@drawable/sign"
+            android:contentDescription="@string/options" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:clickable="false"
+
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="@string/options"
+            android:textColor="#0E2E1D"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

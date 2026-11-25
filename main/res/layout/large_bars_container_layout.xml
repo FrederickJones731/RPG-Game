@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".fight.largeBarsContainerLayout">
+
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="15sp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginHorizontal="10dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="1dp"
+        android:background="@drawable/background_greys">
+
+        <TextView
+            android:id="@+id/name_text_view"
+            style="@style/alt_text_bold"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+
+            android:fontFamily="@font/alegreya_black_italic"
+            android:text="Motorcycle Knight"
+            android:textColor="#B31D1D"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/bullet_count_text_view"
+            style="@style/alt_text_bold"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+
+            android:fontFamily="@font/alegreya_black_italic"
+            android:text="6"
+            android:textColor="#B31D1D"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/bar_weapon_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/weapon_icon_bow"/>
+
+        <ImageView
+            android:id="@+id/bar_affinity_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/symbol_glacier"/>
+
+        <ImageView
+            android:id="@+id/cur_status_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/symbol_thunder"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lbcontainer_background"
+        android:layout_width="230dp"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="7sp"
+        android:background="@drawable/sign"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:theme="@style/Theme.AppCompat"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <!--hp bar-->
+        <declatoration.simulatorial.fight.largeBar
+            android:id="@+id/hpBarRL"
+            android:layout_width="190dp"
+            android:layout_height="18dp"
+            android:background="@drawable/hpbar"
+            android:theme="@style/Theme.AppCompat"
+
+            app:isHpBar="true"
+            app:layout_constraintHorizontal_bias="0.07"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- sp bar-->
+        <declatoration.simulatorial.fight.largeBar
+            android:id="@+id/spBarRL"
+            android:layout_width="190dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="6sp"
+            android:background="@drawable/spbar"
+            android:foreground="#00000000"
+            android:theme="@style/Theme.AppCompat"
+
+            app:isHpBar="false"
+            app:layout_constraintHorizontal_bias="0.07"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hpBarRL" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        style="@style/alt_text_bold"
+        android:id="@+id/attack_name_tv"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="40dp"
+        android:gravity="center"
+        android:background="@drawable/sign"
+        android:maxLines="1"
+        android:textColor="#EBE4B60F"
+        android:textSize="17sp"
+        android:text="Rifleman's Joyride"/>
+
+
+</LinearLayout>

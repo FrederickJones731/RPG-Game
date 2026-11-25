@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".overview.encyclofrag_stats">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="14sp"
+        android:layout_marginHorizontal="9sp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_weight="8"
+            android:layout_height="0sp"
+            android:layout_width="match_parent"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/aff_icon"
+                android:layout_width="45sp"
+                android:layout_height="45sp"
+                android:layout_marginEnd="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/current_char_name"
+                app:layout_constraintBottom_toBottomOf="@id/current_char_name"
+                android:background="@drawable/enthusiasm"
+                android:contentDescription="@string/turn_count" />
+
+            <ImageView
+                android:id="@+id/weapon_icon"
+                android:layout_width="45sp"
+                android:layout_height="45sp"
+                android:layout_marginEnd="11sp"
+                app:layout_constraintStart_toEndOf="@id/aff_icon"
+                app:layout_constraintTop_toTopOf="@id/current_char_name"
+                app:layout_constraintBottom_toBottomOf="@id/current_char_name"
+                android:background="@drawable/enthusiasm"
+                android:contentDescription="@string/turn_count" />
+            <TextView
+                android:id="@+id/current_char_name"
+                android:text="Luxana"
+                style="@style/normal_text_header"
+
+                android:layout_weight="5"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17sp"
+                android:textSize="44sp"
+
+                app:layout_constraintVertical_bias="0.2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/weapon_icon"/>
+
+
+            <TextView
+                android:id="@+id/current_char_class"
+
+                android:text="Apprentice"
+                style="@style/normal_text"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp"
+                android:layout_marginStart="40sp"
+                app:layout_constraintTop_toBottomOf="@id/current_char_name"
+                app:layout_constraintStart_toStartOf="@id/aff_icon"/>
+
+            <TextView
+                android:id="@+id/current_char_hpbar"
+                android:layout_width="120sp"
+                android:layout_height="30sp"
+                android:layout_marginStart="15sp"
+                android:background="@drawable/hpbar"
+                android:gravity="center"
+
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:text="20/20"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.48"
+                app:layout_constraintStart_toEndOf="@id/current_char_name"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <TextView
+                android:id="@+id/current_char_spbar"
+                android:layout_width="120sp"
+                android:layout_height="30sp"
+                android:background="@drawable/spbar"
+                android:gravity="center"
+
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:text="65/65"
+
+                app:layout_constraintTop_toBottomOf="@id/current_char_hpbar"
+                app:layout_constraintStart_toStartOf="@id/current_char_hpbar"/>
+
+            <TextView
+                android:id="@+id/current_char_level"
+
+                android:text="Lv. 4"
+                style="@style/normal_text"
+
+                android:layout_weight="2"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginEnd="10sp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/current_char_hpbar"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--        <TableRow-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0sp"-->
+        <!--            android:layout_weight="5"-->
+        <!--            android:gravity="center">-->
+
+        <!--            <ImageView-->
+        <!--                android:layout_width="40sp"-->
+        <!--                android:layout_height="40sp"-->
+        <!--                android:layout_marginEnd="11sp"-->
+        <!--                android:background="@drawable/enthusiasm"/>-->
+        <!--            -->
+        <!--            <TextView-->
+        <!--                android:id="@+id/current_char_name"-->
+        <!--                android:text="Luxana"-->
+        <!--                style="@style/normal_text_header"-->
+
+        <!--                android:layout_weight="5"-->
+        <!--                android:layout_width="0sp"-->
+        <!--                android:layout_height="wrap_content"/>-->
+
+        <!--            -->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/current_char_level"-->
+
+        <!--                android:text="Lv. 4"-->
+        <!--                style="@style/normal_text"-->
+
+
+        <!--                android:layout_weight="2"-->
+        <!--                android:layout_width="0sp"-->
+        <!--                android:layout_height="wrap_content"/>-->
+
+        <!--        </TableRow>-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2sp"
+            android:background="#63000000"/>
+
+        <TableRow
+            android:gravity="center"
+            android:paddingStart="20sp"
+            android:paddingEnd="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="3">
+
+            <TextView
+
+                android:text="@string/atk"
+                style="@style/normal_text_bold"
+
+                android:layout_weight="4"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/current_char_atk"
+                android:text="3"
+                android:paddingStart="8sp"
+                style="@style/normal_text_italic"
+                android:layout_weight="5"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="@string/def"
+                style="@style/normal_text_bold"
+
+
+                android:layout_weight="4"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/current_char_def"
+                android:text="11"
+                style="@style/normal_text_italic"
+                android:paddingStart="8sp"
+                android:layout_weight="5"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+        </TableRow>
+
+        <TableRow
+            android:gravity="center"
+            android:paddingStart="20sp"
+            android:paddingEnd="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="3">
+
+            <TextView
+
+                android:text="@string/mag"
+                style="@style/normal_text_bold"
+
+
+                android:layout_weight="4"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/current_char_mag"
+                android:text="19"
+                style="@style/normal_text_italic"
+                android:paddingStart="8sp"
+                android:layout_weight="5"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="@string/intellect"
+                style="@style/normal_text_bold"
+
+
+                android:layout_weight="4"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/current_char_int"
+                android:text="31"
+                style="@style/normal_text_italic"
+                android:paddingStart="8sp"
+                android:layout_weight="5"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+        </TableRow>
+
+        <TableRow
+            android:gravity="center"
+            android:paddingStart="20sp"
+            android:paddingEnd="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="3">
+
+            <TextView
+
+                android:text="@string/spd"
+                style="@style/normal_text_bold"
+
+
+                android:layout_weight="4"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/current_char_spd"
+                android:text="16"
+                style="@style/normal_text_italic"
+                android:paddingStart="8sp"
+                android:layout_weight="5"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="@string/lck"
+                style="@style/normal_text_bold"
+
+
+                android:layout_weight="4"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/current_char_lck"
+                style="@style/normal_text_italic"
+                android:paddingStart="8sp"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="49" />
+
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2sp"
+            android:background="#63000000"/>
+
+        <TableRow
+            android:gravity="center"
+            android:paddingStart="20sp"
+            android:paddingEnd="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="3">
+
+            <TextView
+
+                android:text="@string/hit"
+                style="@style/normal_text_bold"
+                android:layout_weight="4"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+            <!-- hit is times 5 fsr I dunno-->
+            <TextView
+                android:id="@+id/current_char_hit"
+                android:text="105"
+                style="@style/normal_text_italic"
+                android:paddingStart="8sp"
+                android:layout_weight="5"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="@string/crit"
+                style="@style/normal_text_bold"
+                android:layout_weight="4"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/current_char_crit"
+                android:text="1"
+                style="@style/normal_text_italic"
+                android:paddingStart="8sp"
+                android:layout_weight="5"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+        </TableRow>
+
+        <TableRow
+            android:gravity="center"
+            android:paddingStart="20sp"
+            android:paddingEnd="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="3">
+
+            <TextView
+
+                android:text="@string/phys_avo"
+                style="@style/normal_text_bold"
+                android:layout_weight="4"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/current_char_phys_avo"
+                android:text="12"
+                style="@style/normal_text_italic"
+                android:paddingStart="8sp"
+                android:layout_weight="5"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="@string/mag_avo"
+                style="@style/normal_text_bold"
+                android:layout_weight="4"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/current_char_mag_avo"
+                android:text="30"
+                style="@style/normal_text_italic"
+                android:paddingStart="8sp"
+                android:layout_weight="5"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:paddingStart="20sp"
+            android:paddingEnd="20sp"
+            android:layout_height="0sp"
+            android:gravity="center"
+            android:layout_weight="3">
+
+            <TextView
+
+                android:text="@string/block"
+                style="@style/normal_text_bold"
+                android:textSize="25dp"
+
+                android:maxLines="1"
+
+                android:layout_weight="4"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/current_char_block"
+                android:text="6"
+                style="@style/normal_text_italic"
+                android:paddingStart="8sp"
+                android:layout_weight="5"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="@string/res"
+                style="@style/normal_text_bold"
+
+
+                android:layout_weight="4"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/current_char_res"
+                android:text="14%"
+                style="@style/normal_text_italic"
+                android:paddingStart="8sp"
+                android:layout_weight="5"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"/>
+
+        </TableRow>
+
+
+
+
+    </TableLayout>
+
+
+</FrameLayout>

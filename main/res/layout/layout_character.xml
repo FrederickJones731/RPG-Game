@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@android:style/ThemeOverlay.Material.Dark"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_margin="7sp"
+    android:background="#00000000"
+    android:orientation="horizontal"
+    tools:context=".fight.characterLayout"
+    app:layoutDescription="@xml/layout_character_scene">
+
+
+        <declatoration.simulatorial.fight.smallBar
+            android:id="@+id/pc_sp_bar"
+            android:layout_width="5sp"
+            android:layout_height="25sp"
+            android:layout_margin="1sp"
+
+
+            app:layout_constraintEnd_toStartOf="@id/pc_hp_bar"
+            app:layout_constraintTop_toTopOf="@id/pc_hp_bar"
+            app:layout_constraintBottom_toBottomOf="@id/pc_hp_bar"/>
+
+        <declatoration.simulatorial.fight.smallBar
+            android:id="@+id/pc_hp_bar"
+            android:layout_width="5sp"
+            android:layout_height="25sp"
+            android:layout_margin="1sp"
+
+            app:layout_constraintBottom_toTopOf="@id/pc_status_icon"
+            app:layout_constraintEnd_toStartOf="@id/pc_img_RL"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1" />
+
+
+        <RelativeLayout
+            android:id="@+id/pc_img_RL"
+            android:layout_width="50sp"
+            android:layout_height="70sp"
+            android:layout_marginTop="6sp"
+            android:theme="@android:style/ThemeOverlay.Material.Dark"
+            android:foreground="?android:attr/selectableItemBackground"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.07">
+
+            <ImageView
+                android:id="@+id/pc_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/big_biff"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:contentDescription="@string/guard" />
+
+            <View
+                android:id="@+id/pc_img_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="@drawable/empty_bar"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+        </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/pc_status_icon"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:background="@drawable/symbol_fire"
+        android:visibility="invisible"
+        android:layout_margin="1dp"
+        app:layout_constraintBottom_toTopOf="@id/pc_weapon_icon"
+        app:layout_constraintEnd_toStartOf="@id/pc_img_RL" />
+
+    <ImageView
+        android:id="@+id/pc_weapon_icon"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:background="@drawable/symbol_spear"
+        android:layout_margin="1dp"
+        app:layout_constraintBottom_toTopOf="@id/pc_affinity_icon"
+        app:layout_constraintEnd_toStartOf="@id/pc_img_RL" />
+
+    <ImageView
+        android:id="@+id/pc_affinity_icon"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:background="@drawable/symbol_glacier"
+        android:layout_margin="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/pc_img_RL" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".overview.encyclofrag_actions">
+
+
+    <declatoration.simulatorial.overview.encyclofragActionTable
+        android:layout_below="@+id/actions_frag_name_title"
+        android:id="@+id/actions_frag_action_table"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/actions_frag_name_title"
+        style="@style/normal_text_header"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:paddingStart="30sp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+
+        android:gravity="center_vertical"
+        android:background="@drawable/redrivium"
+
+        android:text="Xeno's Actions:" />
+
+</RelativeLayout>

@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        style="@style/alt_text_header2"
+        android:id="@+id/title"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="Vestibule"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+<!--    player side-->
+
+    <LinearLayout
+        android:id="@+id/player_side_ll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="15dp"
+        android:orientation="vertical"
+        android:weightSum="13"
+        app:layout_constraintEnd_toStartOf="@id/halfsies"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/player_side_count_tv"
+                style="@style/alt_text_header2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:text="Enemy Char Count:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+            <TextView
+                android:id="@+id/player_side_num_tv"
+                style="@style/alt_text_header2"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:text="4"
+                app:layout_constraintHorizontal_weight="1.5"
+                app:layout_constraintStart_toEndOf="@id/player_side_count_tv"
+                app:layout_constraintTop_toTopOf="@id/player_side_count_tv" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/player_side_seekbar_ll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center">
+            <!--    enemy number tv-->
+            <TextView
+                style="@style/alt_text_bold"
+                android:layout_width="40dp"
+
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="-"
+
+
+                app:layout_constraintBottom_toTopOf="@id/seekbar_player_side"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <SeekBar
+                android:id="@+id/seekbar_player_side"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:max="499"
+
+                android:progress="325"
+                android:progressDrawable="@drawable/spbar"
+                android:thumb="@drawable/enthusiasm" />
+
+            <TextView
+                style="@style/alt_text"
+                android:layout_width="40dp"
+
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="+"
+
+
+                app:layout_constraintBottom_toTopOf="@id/seekbar_player_side"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9">
+
+            <ScrollView
+                android:id="@+id/char_selector_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="9">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <!-- char selection linear layout 1-->
+                    <LinearLayout
+                        android:id="@+id/ll_char_selection_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="10sp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="3"
+                        android:gravity="center">
+
+                        <!--        <TextView-->
+                        <!--            style="@style/alt_text_bold"-->
+                        <!--            android:layout_width="0dp"-->
+
+                        <!--            android:layout_height="50dp"-->
+                        <!--            android:layout_weight="2"-->
+                        <!--            android:gravity="center"-->
+                        <!--            android:text="*" />-->
+
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switch_p1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:paddingEnd="15dp"
+                            android:textOff="@string/row_the_second"
+                            android:textOn="@string/row_the_first" />
+
+                        <Spinner
+                            android:id="@+id/spinner_1"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="5"
+
+                            android:background="#99807F7F"
+                            android:contentDescription="@string/hide_bottom_view_on_scroll_behavior" />
+
+                        <Button
+                            android:id="@+id/move_selector1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="4"
+                            android:alpha="0.95"
+                            android:background="@drawable/woodpecker"
+
+                            android:fontFamily="sans-serif-black"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:text="@string/char_moves"
+                            android:textColor="#DD000913"
+                            android:textSize="14sp"
+                            android:theme="@android:style/ThemeOverlay.Material.Dark" />
+
+                        <!--        <TextView-->
+                        <!--            style="@style/alt_text"-->
+                        <!--            android:layout_width="0dp"-->
+                        <!--            android:layout_height="50dp"-->
+
+                        <!--            android:layout_weight="2"-->
+                        <!--            android:gravity="right|center"-->
+                        <!--            android:text="@string/Lv" />-->
+
+                        <!--        <EditText-->
+                        <!--            android:id="@+id/edit_text_1"-->
+                        <!--            style="@style/alt_text_small"-->
+                        <!--            android:layout_width="0dp"-->
+                        <!--            android:layout_height="55dp"-->
+
+
+                        <!--            android:layout_weight="3.5"-->
+                        <!--            android:autofillHints=""-->
+                        <!--            android:gravity="center"-->
+                        <!--            android:hint="1 - 50"-->
+                        <!--            android:inputType="number" />-->
+                    </LinearLayout>
+
+                    <!-- char selection linear layout 2-->
+                    <LinearLayout
+                        android:id="@+id/ll_char_selection_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0sp"
+                        android:layout_marginHorizontal="10sp"
+                        android:layout_marginVertical="8dp"
+                        android:layout_weight="3"
+                        android:gravity="center">
+
+                        <!--        <TextView-->
+                        <!--            style="@style/alt_text_bold"-->
+                        <!--            android:layout_width="0dp"-->
+
+                        <!--            android:layout_height="50dp"-->
+                        <!--            android:layout_weight="2"-->
+                        <!--            android:gravity="center"-->
+                        <!--            android:text="*" />-->
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switch_p2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:paddingEnd="15dp"
+                            android:textOff="@string/row_the_second"
+                            android:textOn="@string/row_the_first" />
+
+                        <Spinner
+                            android:id="@+id/spinner_2"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="5"
+
+
+                            android:background="#99807F7F"
+                            android:contentDescription="@string/hide_bottom_view_on_scroll_behavior" />
+
+                        <Button
+                            android:id="@+id/move_selector2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="4"
+                            android:alpha="0.95"
+                            android:background="@drawable/woodpecker"
+
+                            android:fontFamily="sans-serif-black"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:text="@string/char_moves"
+                            android:textColor="#DD000913"
+                            android:textSize="14sp"
+                            android:theme="@android:style/ThemeOverlay.Material.Dark" />
+
+                        <!--        <TextView-->
+                        <!--            style="@style/alt_text"-->
+                        <!--            android:layout_width="0dp"-->
+                        <!--            android:layout_height="50dp"-->
+
+                        <!--            android:layout_weight="2"-->
+                        <!--            android:gravity="right|center"-->
+                        <!--            android:text="@string/Lv" />-->
+
+                        <!--        <EditText-->
+                        <!--            android:id="@+id/edit_text_2"-->
+                        <!--            style="@style/alt_text_small"-->
+                        <!--            android:layout_width="0dp"-->
+                        <!--            android:layout_height="55dp"-->
+
+
+                        <!--            android:layout_weight="3.5"-->
+                        <!--            android:autofillHints=""-->
+                        <!--            android:gravity="center"-->
+                        <!--            android:hint="1 - 50"-->
+                        <!--            android:inputType="number" />-->
+                    </LinearLayout>
+
+                    <!-- char selection linear layout 3-->
+                    <LinearLayout
+                        android:id="@+id/ll_char_selection_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0sp"
+                        android:layout_marginVertical="8dp"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginEnd="10sp"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        >
+
+                        <!--        <TextView-->
+                        <!--            style="@style/alt_text_bold"-->
+                        <!--            android:layout_width="0dp"-->
+
+                        <!--            android:layout_height="50dp"-->
+                        <!--            android:layout_weight="2"-->
+                        <!--            android:gravity="center"-->
+                        <!--            android:text="*" />-->
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switch_p3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:paddingEnd="15dp"
+                            android:textOff="@string/row_the_second"
+                            android:textOn="@string/row_the_first" />
+
+                        <Spinner
+                            android:id="@+id/spinner_3"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="5"
+
+                            android:background="#99807F7F"
+                            android:contentDescription="@string/hide_bottom_view_on_scroll_behavior" />
+
+                        <Button
+                            android:id="@+id/move_selector3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="4"
+                            android:alpha="0.95"
+                            android:background="@drawable/woodpecker"
+
+                            android:fontFamily="sans-serif-black"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:text="@string/char_moves"
+                            android:textColor="#DD000913"
+                            android:textSize="14sp"
+                            android:theme="@android:style/ThemeOverlay.Material.Dark" />
+                        <!--        <TextView-->
+                        <!--            style="@style/alt_text"-->
+                        <!--            android:layout_width="0dp"-->
+                        <!--            android:layout_height="50dp"-->
+
+                        <!--            android:layout_weight="2"-->
+                        <!--            android:gravity="right|center"-->
+                        <!--            android:text="@string/Lv" />-->
+                        <!---->
+                        <!--        <EditText-->
+                        <!--            android:id="@+id/edit_text_3"-->
+                        <!--            style="@style/alt_text_small"-->
+                        <!--            android:layout_width="0dp"-->
+                        <!--            android:layout_height="55dp"-->
+
+
+                        <!--            android:layout_weight="3.5"-->
+                        <!--            android:autofillHints=""-->
+                        <!--            android:gravity="center"-->
+                        <!--            android:hint="1 - 50"-->
+                        <!--            android:inputType="number"-->
+                        <!--            android:contentDescription="@string/hide_bottom_view_on_scroll_behavior"/>-->
+                    </LinearLayout>
+
+                    <!-- char selection linear layout 4-->
+                    <LinearLayout
+                        android:id="@+id/ll_char_selection_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0sp"
+                        android:layout_marginVertical="8dp"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginEnd="10sp"
+                        android:layout_weight="3"
+                        android:gravity="center">
+
+                        <!--        <TextView-->
+                        <!--            style="@style/alt_text_bold"-->
+                        <!--            android:layout_width="0dp"-->
+
+                        <!--            android:layout_height="50dp"-->
+                        <!--            android:layout_weight="2"-->
+                        <!--            android:gravity="center"-->
+                        <!--            android:text="*" />-->
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switch_p4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:paddingEnd="15dp"
+                            android:textOff="@string/row_the_second"
+                            android:textOn="@string/row_the_first" />
+
+                        <Spinner
+                            android:id="@+id/spinner_4"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="5"
+
+
+                            android:background="#99807F7F"
+                            android:contentDescription="@string/hide_bottom_view_on_scroll_behavior" />
+
+                        <Button
+                            android:id="@+id/move_selector4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="4"
+                            android:alpha="0.95"
+                            android:background="@drawable/woodpecker"
+
+                            android:fontFamily="sans-serif-black"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:text="@string/char_moves"
+                            android:textColor="#DD000913"
+                            android:textSize="14sp"
+                            android:theme="@android:style/ThemeOverlay.Material.Dark" />
+                    </LinearLayout>
+
+                    <!-- char selection linear layout 5-->
+                    <LinearLayout
+                        android:id="@+id/ll_char_selection_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="0sp"
+                        android:layout_marginVertical="8dp"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginEnd="10sp"
+                        android:layout_weight="3"
+                        android:visibility="invisible"
+                        android:gravity="center"
+                        >
+
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switch_p5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:paddingEnd="15dp"
+                            android:textOff="@string/row_the_second"
+                            android:textOn="@string/row_the_first" />
+
+                        <Spinner
+                            android:id="@+id/spinner_5"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="5"
+
+                            android:background="#99807F7F"
+                            android:contentDescription="@string/hide_bottom_view_on_scroll_behavior" />
+
+                        <Button
+                            android:id="@+id/move_selector5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="4"
+                            android:alpha="0.95"
+                            android:background="@drawable/woodpecker"
+
+                            android:fontFamily="sans-serif-black"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:text="@string/char_moves"
+                            android:textColor="#DD000913"
+                            android:textSize="14sp"
+                            android:theme="@android:style/ThemeOverlay.Material.Dark" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+
+            <View
+                android:id="@+id/scroll_blocker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:elevation="500dp"
+                android:background="@drawable/background_greys"
+                android:clickable="true"
+
+                app:layout_constraintTop_toTopOf="@id/char_selector_view"
+                app:layout_constraintBottom_toBottomOf="@id/char_selector_view"
+                app:layout_constraintEnd_toEndOf="@id/char_selector_view"
+                app:layout_constraintStart_toStartOf="@id/char_selector_view"
+                android:focusable="true" />
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+
+
+<!--    enemy side-->
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toEndOf="@id/halfsies"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toBottomOf="@id/midpoint">
+
+
+        <LinearLayout
+            android:id="@+id/enemy_levels_ll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:layout_margin="7dp"
+
+
+            android:gravity="fill_horizontal"
+            android:paddingStart="5dp"
+            app:layout_constraintStart_toEndOf="@id/halfsies"
+            app:layout_constraintTop_toBottomOf="@id/enemy_levels_ll">
+
+            <TextView
+                style="@style/alt_text_bold2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:text="Enemy Level: " />
+
+            <EditText
+                android:id="@+id/edit_text_enemy_lvl"
+                style="@style/alt_text_small2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:autofillHints=""
+                android:gravity="center"
+                android:hint="1 - 50"
+                android:background="@drawable/background_greys"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/enemy_str_level_ll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:layout_margin="7dp"
+
+            android:gravity="fill_horizontal"
+            android:paddingStart="5dp"
+            app:layout_constraintStart_toEndOf="@id/halfsies"
+            app:layout_constraintTop_toBottomOf="@id/enemy_levels_ll">
+
+            <TextView
+                style="@style/alt_text_bold2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_weight="2"
+                android:text="Strength Level: " />
+
+            <EditText
+                android:id="@+id/edit_text_str_level"
+                style="@style/alt_text_small2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:autofillHints=""
+                android:background="@drawable/background_greys"
+                android:gravity="center"
+                android:hint="1 - 25"
+                android:inputType="number" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/top_strip_ll"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginVertical="6dp"
+            android:layout_marginHorizontal="7dp"
+
+            android:paddingStart="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/halfsies"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/alt_text_bold2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1.5"
+                android:text="@string/enemy_chars" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/char_enemy_switch"
+                style="@style/alt_text_small2"
+                android:checked="false"
+                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/char_enemy_toggle_tv"
+                style="@style/alt_text_bold2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:maxLines="2"
+                android:gravity="center"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:text="@string/enemy_toggle_2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/enemy_ai_toggle_ll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:layout_margin="7dp"
+
+            android:gravity="fill_horizontal"
+            android:paddingStart="5dp"
+            app:layout_constraintStart_toEndOf="@id/halfsies"
+            app:layout_constraintTop_toBottomOf="@id/enemy_levels_ll">
+
+            <TextView
+                style="@style/alt_text_bold2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:layout_marginStart="10dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:text="AI Mode: " />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/ai_toggle_switch"
+                style="@style/alt_text_small2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:layout_weight="0.5"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/ai_mode_toggle_tv"
+                style="@style/alt_text_bold2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:text="@string/on" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/midpoint"
+        android:layout_width="0.1dp"
+        android:layout_height="0.1dp"
+        app:layout_constraintTop_toTopOf="@id/player_side_ll"
+        app:layout_constraintBottom_toBottomOf="@id/player_side_ll"
+        app:layout_constraintVertical_bias="0.82"
+        app:layout_constraintStart_toEndOf="@id/halfsies"/>
+    <View
+        android:id="@+id/halfsies"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:background="#3B000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

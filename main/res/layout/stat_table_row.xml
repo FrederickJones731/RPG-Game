@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/redrivium"
+    android:padding="8dp"
+    android:weightSum="14">
+
+
+    <TextView
+        android:id="@+id/table_row_stat_name"
+        style="@style/normal_text"
+        android:layout_width="0sp"
+        android:layout_height="match_parent"
+
+        android:layout_weight="3"
+        android:gravity="center"
+        android:maxLines="2"
+        android:background="@drawable/box"
+        android:text="@string/mag_avo"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/table_row_ll"
+        android:layout_width="0sp"
+        android:layout_height="match_parent"
+        android:layout_weight="9"
+        android:layout_marginStart="5dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/table_row_bar1"
+            android:layout_width="match_parent"
+            android:layout_height="6sp"
+            android:layout_margin="2sp"
+
+            android:background="#21D833" />
+
+        <ImageView
+            android:id="@+id/table_row_bar2"
+            android:layout_width="100sp"
+            android:layout_height="6sp"
+            android:layout_margin="2sp"
+
+            android:background="#21D833" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/table_row_val"
+        style="@style/normal_text_bold"
+        android:layout_width="50sp"
+        android:layout_height="match_parent"
+        android:background="@drawable/lowen"
+
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="10"
+        android:textSize="20sp" />
+
+
+</TableRow>

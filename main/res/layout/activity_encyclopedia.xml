@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".overview.encyclopedia">
+
+
+<!--    background-->
+    <HorizontalScrollView
+        android:id="@+id/background_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:alpha="0.88"
+                android:id="@+id/background"
+                android:layout_width="1000dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/armory"
+                android:contentDescription="@string/title_activity_toaster" />
+        </FrameLayout>
+
+    </HorizontalScrollView>
+
+
+
+
+    <pl.droidsonroids.gif.GifImageButton
+        android:id="@+id/back_button"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_margin="12sp"
+        android:background="@drawable/back_gif"
+
+
+        android:contentDescription="@string/back"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pager_of_views"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        app:rippleColor="#390F0F"
+        android:layout_margin="20dp"
+        android:contentDescription="@string/Lv"
+        android:pointerIcon="crosshair"/>
+
+
+<!--    <SlidingDrawer-->
+<!--        android:id="@+id/drawer_menu"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:content="@id/sliding_drawer_content"-->
+<!--        android:elevation="80dp"-->
+<!--        android:handle="@id/sliding_drawer_handle"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/sliding_drawer_handle"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:background="@drawable/enthusiasm"-->
+<!--            android:contentDescription="@string/start_game" />-->
+
+<!--        <ScrollView-->
+<!--            android:elevation="20dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/sliding_drawer_content"-->
+<!--                android:layout_width="400dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <TextView-->
+<!--                    style="@style/alt_text_header"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_margin="12dp"-->
+<!--                    android:text="Char Overview:" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/alt_text_bold"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_margin="12dp"-->
+<!--                    android:text="Player Characters:" />-->
+
+
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/drawer_player_chars_ll"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/alt_text_bold"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_margin="12dp"-->
+<!--                    android:text="Enemy Characters:" />-->
+
+
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/drawer_enemy_chars_ll"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical" />-->
+
+<!--            </LinearLayout>-->
+<!--        </ScrollView>-->
+<!--    </SlidingDrawer>-->
+
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

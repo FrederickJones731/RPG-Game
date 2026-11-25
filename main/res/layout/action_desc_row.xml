@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/redrivium"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/action_icon"
+        android:src="@drawable/spinny_hex_thing"
+        android:layout_width="45sp"
+        android:layout_height="45sp"
+        android:layout_margin="10sp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/action_name"
+        style="@style/normal_text_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8sp"
+
+        android:text="Sororal Backslash"
+        android:textColor="#000000"
+
+        app:layout_constraintVertical_bias="0.85"
+        app:layout_constraintTop_toTopOf="@id/action_icon"
+        app:layout_constraintBottom_toBottomOf="@id/action_icon"
+        app:layout_constraintStart_toEndOf="@id/action_icon"/>
+
+    <TextView
+        android:id="@+id/action_desc"
+        style="@style/alt_text_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8sp"
+        android:paddingHorizontal="30dp"
+        android:gravity="start"
+
+        android:textSize="20sp"
+        android:textColor="#DF0B0B0B"
+        android:text="Long winded text just so I can see how this looks like since
+I really need to fill in the space in this text box"
+
+        app:layout_constraintTop_toBottomOf="@id/symbol_1"/>
+
+
+
+    <ImageView
+        android:id="@+id/symbol_1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/symbol_physical"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action_icon"/>
+
+    <ImageView
+        android:id="@+id/symbol_2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/symbol_sword"
+
+        app:layout_constraintTop_toTopOf="@id/symbol_1"
+        app:layout_constraintStart_toEndOf="@id/symbol_1"/>
+
+    <ImageView
+        android:id="@+id/symbol_3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/symbol_fire"
+
+        app:layout_constraintTop_toTopOf="@id/symbol_1"
+        app:layout_constraintStart_toEndOf="@id/symbol_2"/>
+
+<!--    <ImageView-->
+<!--        android:id="@+id/symbol_4"-->
+<!--        android:layout_width="30dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:background="@drawable/symbol_dark"-->
+
+<!--        app:layout_constraintTop_toTopOf="@id/symbol_1"-->
+<!--        app:layout_constraintStart_toEndOf="@id/symbol_3"/>-->
+
+
+    <TextView
+        android:id="@+id/cooldown_textview"
+        style="@style/normal_text_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18sp"
+        android:layout_marginBottom="2dp"
+        android:gravity="center"
+
+        android:textSize="16sp"
+        android:text="(3 Turns)"
+
+        app:layout_constraintTop_toBottomOf="@id/action_desc"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/sp_use_textview"
+        style="@style/alt_text_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30sp"
+
+        android:text="32SP"
+        android:textStyle="bold"
+        android:textColor="#054E80"
+
+        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintBottom_toBottomOf="@id/action_name"
+        app:layout_constraintTop_toTopOf="@id/action_name"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

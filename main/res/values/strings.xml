@@ -1,0 +1,154 @@
+<resources>
+    <string name="app_name">RPG Game - Battle Simulation</string>
+
+    <string name="title">RPG Game - Battle Simulation App Thing</string>
+    <string name="start_game">start simming</string>
+    <string name="options">optionizifications</string>
+    <string name="character_overview">ooh numbers</string>
+    <string name="back">go back</string>
+    <string name="back_to_main_button">Back to Main Screen</string>
+
+    <string name="attack">Attack!</string>
+    <string name="guard">Guard</string>
+    <string name="row">Row</string>
+    <string name="focus">Focus</string>
+    <string name="assist">Assist</string>
+    <string name="hp_potion">HP Potion</string>
+    <string name="sp_potion">SP Potion</string>
+
+
+    <string name="attack_desc">Attack!</string>
+    <string name="guard_desc">Block any incoming attack, until char\'s next turn.</string>
+    <string name="row_desc">Move a row.</string>
+    <string name="focus_desc">Gain another 5 SP, and regenerate triple the normal amount. </string>
+    <string name="assist_desc">Assist another char\'s Attack.</string>
+    <string name="hp_potion_desc">Regenerate 60 HP.</string>
+    <string name="sp_potion_desc">Regenerate 50 SP.</string>
+
+    <string name="action1">action 1</string>
+    <string name="action2">action 2</string>
+    <string name="action3">action 3</string>
+    <string name="action4">action 4</string>
+
+    <string name="Lv">Lv.</string>
+    <string name="HP">HP</string>
+    <string name="SP">SP</string>
+
+
+    <string name="bases">Bases:</string>
+    <string name="Stats">Stats:</string>
+    <string name="atk">ATK:</string>
+    <string name="def">DEF:</string>
+    <string name="mag">MAG:</string>
+    <string name="intellect">INT:</string>
+    <string name="spd">SPD:</string>
+    <string name="lck">LCK:</string>
+    <string name="hit">Hit:</string>
+    <string name="crit">Crit:</string>
+    <string name="phys_avo">Phys. Avo:</string>
+    <string name="mag_avo">Mag. Avo:</string>
+    <string name="block">Block:</string>
+    <string name="res">Res:</string>
+
+    <string name="hpbar_temp">188/211</string>
+    <string name="spbar_temp">59/71</string>
+
+    <string name="row_the_first">Row 1</string>
+    <string name="row_the_second">Row 2</string>
+
+    <string-array name="stat_str">
+        <item>hp</item>
+        <item>atk</item>
+        <item>def</item>
+        <item>mag</item>
+        <item>int</item>
+        <item>spd</item>
+        <item>luck</item>
+        <item>hit</item>
+        <item>crit</item>
+        <item>physavo</item>
+        <item>magavo</item>
+        <item>block</item>
+    </string-array>
+
+    <string-array name="action_var_str">
+        <item>mod</item>
+        <item>isMag</item>
+        <item>status</item>
+        <item>statusLength</item>
+        <item>spUsage</item>
+        <item>numOfAttacks</item>
+        <item>cooldown</item>
+        <item>aoe</item>
+        <item>range</item>
+        <item>unlockLvl</item>
+        <item>tag1</item>
+        <item>tag2</item>
+        <item>tag3</item>
+        <item>tag4</item>
+        <item>name</item>
+    </string-array>
+
+    <string-array name="skill_var_str">
+        <item>mod</item>
+        <item>turnsLasting</item>
+        <item>triggerStat</item>
+        <item>triggerPercent</item>
+        <item>affectedStat</item>
+        <item>affectedTarget</item>
+        <item>status</item>
+        <item>unlockLvl</item>
+        <item>tag1</item>
+        <item>tag2</item>
+        <item>tag3</item>
+        <item>tag4</item>
+        <item>returnTag</item>
+        <item>skillName</item>
+    </string-array>
+
+
+    <string name="player_win">MegaDeath Wins!</string>
+    <string name="enemy_win">Enemy Team Wins!</string>
+
+    <string name="turn_count">Turn Count:</string>
+    <string name="char_moves">Move Selector</string>
+    <string name="title_activity_toaster">toaster</string>
+
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="optionizifications">Optionizifications</string>
+    <string name="main_screen_theme">Main Screen Theme:</string>
+    <string name="apply">Apply!</string>
+
+    <string name="clash_mode0">NONE</string>
+    <string name="clash_mode0_title">Mode 1: No Clash Effects -</string>
+    <string name="clash_mode0_desc">Clash Effects will not trigger whatsoever.</string>
+
+    <string name="clash_mode1">STAB</string>
+    <string name="clash_mode1_title">Mode 2: STAB Clash Effects -</string>
+    <string name="clash_mode1_desc">Positive Clash Effects will only apply when used by a char of the same Affinity. Negative ones will only apply when NOT the same affinity.</string>
+
+    <string name="clash_mode2">ALL</string>
+    <string name="clash_mode2_title">Mode 3: Clash Effects, Galore -</string>
+    <string name="clash_mode2_desc">Clash Effects will trigger ALL THE TIME. This is CRAZY MODE.</string>
+    <string name="wait_action">Wait</string>
+    <string name="self">Self</string>
+    <string name="target">Target</string>
+    <string name="target_opp">Target</string>
+    <string name="enemy_chars">Enemy Chars:</string>
+    <string name="map_select">Map Select:</string>
+    <string name="enemy_toggle_1">Selected Chars</string>
+    <string name="enemy_toggle_2">Randomized Enemies</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="randomize">Randomize</string>
+    <string name="choose">Choose</string>
+    <string name="onset_instructions">Please select 5 characters to begin Campaign Mode with.\n They will be the ONLY characters you\'ll be able to use until unlocking more! \n Choose Wisely!</string>
+</resources>

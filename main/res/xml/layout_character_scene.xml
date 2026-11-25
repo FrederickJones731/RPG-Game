@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:motion="http://schemas.android.com/tools">
+
+    <Transition
+        android:id="@+id/bar_fade_in"
+        app:constraintSetEnd="@id/end_bar_fade_in"
+        app:constraintSetStart="@+id/start_bar_fade_in" />
+
+    <Transition
+        android:id="@+id/hurt"
+        app:constraintSetEnd="@id/hurt_end"
+        app:constraintSetStart="@+id/hurt_start"
+        app:duration="3" />
+
+
+    <ConstraintSet android:id="@+id/start_bar_fade_in">
+        <Constraint
+            android:id="@+id/pc_sp_bar"
+            android:layout_width="5sp"
+            android:layout_height="25sp"
+            android:layout_margin="1sp"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/pc_hp_bar"
+            app:layout_constraintVertical_bias="0.1" />
+        <Constraint
+            android:id="@+id/pc_hp_bar"
+            android:layout_width="5sp"
+            android:layout_height="25sp"
+            android:layout_margin="1sp"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/pc_img_RL"
+            app:layout_constraintVertical_bias="0.1" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end_bar_fade_in">
+        <Constraint
+            android:id="@id/pc_sp_bar"
+            android:layout_width="5sp"
+            android:layout_height="25sp"
+            android:layout_margin="1sp"
+            android:alpha="255"
+            app:layout_constraintEnd_toStartOf="@id/pc_hp_bar"
+            app:layout_constraintTop_toTopOf="@id/pc_img_RL"
+            app:layout_constraintVertical_bias="0.1" />
+        <Constraint
+            android:id="@+id/pc_hp_bar"
+            android:layout_width="5sp"
+            android:layout_height="25sp"
+            android:layout_margin="1sp"
+            android:alpha="255"
+            app:layout_constraintEnd_toStartOf="@id/pc_img_RL"
+            app:layout_constraintTop_toTopOf="@id/pc_img_RL"
+            app:layout_constraintVertical_bias="0.1" />
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/hurt_start">
+        <Constraint
+            android:id="@+id/pc_img_RL"
+            android:layout_width="40sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="6sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.07" />
+
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/hurt_end">
+        <Constraint
+            android:id="@+id/pc_img_RL"
+            android:layout_width="40sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="6sp"
+
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.07">
+            <CustomAttribute
+                app:attributeName="backgroundTint"
+                app:customColorValue="#FFFFFF" />
+        </Constraint>
+
+    </ConstraintSet>
+
+<!--    <Transition>-->
+<!--        <KeyFrameSet>-->
+<!--            <KeyAttribute-->
+<!--                android:rotation="3"-->
+<!--                android:scaleX="1.05"-->
+<!--                android:scaleY="1.05"-->
+<!--                motion:framePosition="2"-->
+<!--                motion:motionTarget="@+id/pc_img_RL" />-->
+<!--        </KeyFrameSet>-->
+<!--        <KeyFrameSet>-->
+<!--            <KeyAttribute-->
+<!--                android:rotation="-3"-->
+<!--                android:scaleX="1.1"-->
+<!--                android:scaleY="1.1"-->
+<!--                motion:framePosition="4"-->
+<!--                motion:motionTarget="@+id/pc_img_RL" />-->
+<!--        </KeyFrameSet>-->
+<!--        <KeyFrameSet>-->
+<!--            <KeyAttribute-->
+<!--                android:rotation="3"-->
+<!--                android:scaleX="1.15"-->
+<!--                android:scaleY="1.15"-->
+<!--                motion:framePosition="6"-->
+<!--                motion:motionTarget="@+id/pc_img_RL" />-->
+<!--        </KeyFrameSet>-->
+<!--        <KeyFrameSet>-->
+<!--            <KeyAttribute-->
+<!--                android:rotation="-3"-->
+<!--                android:scaleX="1.15"-->
+<!--                android:scaleY="1.15"-->
+<!--                motion:framePosition="8"-->
+<!--                motion:motionTarget="@+id/pc_img_RL" />-->
+<!--        </KeyFrameSet>-->
+<!--        <KeyFrameSet>-->
+<!--            <KeyAttribute-->
+<!--                android:rotation="3"-->
+<!--                android:scaleX="1.1"-->
+<!--                android:scaleY="1.1"-->
+<!--                motion:framePosition="10"-->
+<!--                motion:motionTarget="@+id/pc_img_RL" />-->
+<!--        </KeyFrameSet>-->
+<!--        <KeyFrameSet>-->
+<!--            <KeyAttribute-->
+<!--                android:rotation="-3"-->
+<!--                android:scaleX="1.05"-->
+<!--                android:scaleY="1.05"-->
+<!--                motion:framePosition="12"-->
+<!--                motion:motionTarget="@+id/pc_img_RL" />-->
+<!--        </KeyFrameSet>-->
+
+<!--    </Transition>-->
+
+
+</MotionScene>

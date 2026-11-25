@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D5CACA"
+    tools:context=".overview.oldd.characterOverview">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/overview_top_bar_cl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15sp"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/redrivium"
+            android:text="@string/bases"
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="#000000"
+
+            app:layout_constraintRight_toLeftOf="@id/actual_bases_switch"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/actual_bases_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="25sp"
+
+            android:checked="false"
+
+            app:layout_constraintRight_toLeftOf="@id/back_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_margin="12sp"
+
+
+            android:background="@drawable/back_gif"
+            android:contentDescription="@string/back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/char_data_fragment_holder"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        app:layout_constraintBottom_toTopOf="@id/horizon_scroller"
+
+        app:layout_constraintTop_toBottomOf="@id/overview_top_bar_cl"
+        tools:layout="@layout/fragment_char_stat_display" />
+
+    <ScrollView
+        android:id="@+id/horizon_scroller"
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:contentDescription="@string/character_overview"
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/char_data_fragment_holder">
+
+        <LinearLayout
+            android:id="@+id/scrollview_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal"/>
+
+    </ScrollView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
